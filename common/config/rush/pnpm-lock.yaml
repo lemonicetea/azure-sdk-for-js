@@ -1,7 +1,7 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
 
 dependencies:
@@ -1912,12 +1912,42 @@ packages:
       lodash: 4.17.21
     dev: false
 
+  /@microsoft/api-extractor-model@7.28.2(@types/node@16.18.61):
+    resolution: {integrity: sha512-vkojrM2fo3q4n4oPh4uUZdjJ2DxQ2+RnDQL/xhTWSRUNPF6P4QyrvY357HBxbnltKcYu+nNNolVqc6TIGQ73Ig==}
+    dependencies:
+      '@microsoft/tsdoc': 0.14.2
+      '@microsoft/tsdoc-config': 0.16.2
+      '@rushstack/node-core-library': 3.61.0(@types/node@16.18.61)
+    transitivePeerDependencies:
+      - '@types/node'
+    dev: false
+
   /@microsoft/api-extractor-model@7.28.2(@types/node@18.18.7):
     resolution: {integrity: sha512-vkojrM2fo3q4n4oPh4uUZdjJ2DxQ2+RnDQL/xhTWSRUNPF6P4QyrvY357HBxbnltKcYu+nNNolVqc6TIGQ73Ig==}
     dependencies:
       '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
       '@rushstack/node-core-library': 3.61.0(@types/node@18.18.7)
+    transitivePeerDependencies:
+      - '@types/node'
+    dev: false
+
+  /@microsoft/api-extractor@7.38.0(@types/node@16.18.61):
+    resolution: {integrity: sha512-e1LhZYnfw+JEebuY2bzhw0imDCl1nwjSThTrQqBXl40hrVo6xm3j/1EpUr89QyzgjqmAwek2ZkIVZbrhaR+cqg==}
+    hasBin: true
+    dependencies:
+      '@microsoft/api-extractor-model': 7.28.2(@types/node@16.18.61)
+      '@microsoft/tsdoc': 0.14.2
+      '@microsoft/tsdoc-config': 0.16.2
+      '@rushstack/node-core-library': 3.61.0(@types/node@16.18.61)
+      '@rushstack/rig-package': 0.5.1
+      '@rushstack/ts-command-line': 4.16.1
+      colors: 1.2.5
+      lodash: 4.17.21
+      resolve: 1.22.8
+      semver: 7.5.4
+      source-map: 0.6.1
+      typescript: 5.0.4
     transitivePeerDependencies:
       - '@types/node'
     dev: false
@@ -2605,6 +2635,24 @@ packages:
       rollup: 3.29.4
     dev: false
 
+  /@rushstack/node-core-library@3.61.0(@types/node@16.18.61):
+    resolution: {integrity: sha512-tdOjdErme+/YOu4gPed3sFS72GhtWCgNV9oDsHDnoLY5oDfwjKUc9Z+JOZZ37uAxcm/OCahDHfuu2ugqrfWAVQ==}
+    peerDependencies:
+      '@types/node': '*'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+    dependencies:
+      '@types/node': 16.18.61
+      colors: 1.2.5
+      fs-extra: 7.0.1
+      import-lazy: 4.0.0
+      jju: 1.4.0
+      resolve: 1.22.8
+      semver: 7.5.4
+      z-schema: 5.0.5
+    dev: false
+
   /@rushstack/node-core-library@3.61.0(@types/node@18.18.7):
     resolution: {integrity: sha512-tdOjdErme+/YOu4gPed3sFS72GhtWCgNV9oDsHDnoLY5oDfwjKUc9Z+JOZZ37uAxcm/OCahDHfuu2ugqrfWAVQ==}
     peerDependencies:
@@ -2910,6 +2958,10 @@ packages:
     dependencies:
       '@types/node': 18.18.7
       form-data: 4.0.0
+    dev: false
+
+  /@types/node@16.18.61:
+    resolution: {integrity: sha512-k0N7BqGhJoJzdh6MuQg1V1ragJiXTh8VUBAZTWjJ9cUq23SG0F0xavOwZbhiP4J3y20xd6jxKx+xNUhkMAi76Q==}
     dev: false
 
   /@types/node@18.18.7:
@@ -4426,7 +4478,7 @@ packages:
     dependencies:
       semver: 7.5.4
       shelljs: 0.8.5
-      typescript: 5.3.0-dev.20231030
+      typescript: 5.4.0-dev.20231112
     dev: false
 
   /eastasianwidth@0.2.0:
@@ -8988,6 +9040,37 @@ packages:
       code-block-writer: 12.0.0
     dev: false
 
+  /ts-node@10.9.1(@types/node@16.18.61)(typescript@5.0.4):
+    resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.9
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 16.18.61
+      acorn: 8.11.2
+      acorn-walk: 8.3.0
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.0.4
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    dev: false
+
   /ts-node@10.9.1(@types/node@18.18.7)(typescript@5.0.4):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
@@ -9192,8 +9275,8 @@ packages:
     hasBin: true
     dev: false
 
-  /typescript@5.3.0-dev.20231030:
-    resolution: {integrity: sha512-azWrF0lAiu8cBHNr6yq3RDkU/DtQScvT48ea3Ngq6oXJ/GPO0n96wCFSRQA5UbZlVVf3fAAqsUfvOdohRbrPVg==}
+  /typescript@5.4.0-dev.20231112:
+    resolution: {integrity: sha512-K7RH4eFyxJG7LkKWU0m7WdQrNRNz8yVkt2zW2tT2zfiUzIN2jbh2JLuztSqCsfqMNU5KduO7NvKaKK4QIvGY/Q==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: false
@@ -9862,15 +9945,15 @@ packages:
     dev: false
 
   file:projects/ai-content-safety.tgz:
-    resolution: {integrity: sha512-Afa6TPjGd44mADJeu36v5fLRWjT/8NXZKYeLJfFk5M94kTPA4eoqkjuCNuGv2ra1aHrsH9FlJVdTvcf38zXfYw==, tarball: file:projects/ai-content-safety.tgz}
+    resolution: {integrity: sha512-zwuDivq+3To+tq6xHCPVwO9rP+lL8s5wHrsMhSM2X+AH1kjD9bYitmxAE5Ji1tikxydHsLVhLIzj3ro/wkmRwQ==, tarball: file:projects/ai-content-safety.tgz}
     name: '@rush-temp/ai-content-safety'
     version: 0.0.0
     dependencies:
       '@azure/identity': 3.3.2
-      '@microsoft/api-extractor': 7.38.0(@types/node@18.18.7)
+      '@microsoft/api-extractor': 7.38.0(@types/node@16.18.61)
       '@types/chai': 4.3.9
       '@types/mocha': 10.0.3
-      '@types/node': 18.18.7
+      '@types/node': 16.18.61
       autorest: 3.6.3
       c8: 8.0.1
       chai: 4.3.10
@@ -9882,21 +9965,25 @@ packages:
       karma-chrome-launcher: 3.2.0
       karma-coverage: 2.2.1
       karma-env-preprocessor: 0.1.1
-      karma-firefox-launcher: 1.3.0
+      karma-firefox-launcher: 2.1.2
       karma-junit-reporter: 2.0.1(karma@6.4.2)
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5(karma@6.4.2)
       karma-source-map-support: 1.4.0
-      karma-sourcemap-loader: 0.3.8
+      karma-sourcemap-loader: 0.4.0
       mkdirp: 2.1.6
       mocha: 10.2.0
       mocha-junit-reporter: 1.23.3(mocha@10.2.0)
+      nyc: 15.1.0
       prettier: 2.8.8
-      rimraf: 3.0.2
+      rimraf: 5.0.5
       source-map-support: 0.5.21
+      ts-node: 10.9.1(@types/node@16.18.61)(typescript@5.0.4)
       tslib: 2.6.2
-      typescript: 5.2.2
+      typescript: 5.0.4
     transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
       - bufferutil
       - debug
       - supports-color
